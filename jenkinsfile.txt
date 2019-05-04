@@ -2,7 +2,7 @@ pipeline {
 	agent any
  	
  	stages {
- 		stage {'Compile stage'} {
+ 		stage ('Compile stage') {
  					
  					steps {
  					withMaven(maven : 'maven 3.6.1'){
@@ -11,7 +11,7 @@ pipeline {
  							
  							}
  								}	
- 		stage {'Testing stage'} {
+ 		stage ('Testing stage') {
  					
  					steps {
  					withMaven(maven : 'maven 3.6.1'){
